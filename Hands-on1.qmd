@@ -1,0 +1,148 @@
+---
+title: "My First Date with Quarto"
+author: "Dr. Kam Tin Seong"
+date: "September 15, 2025"
+date-modified: "last-modified"
+format:
+  html:
+    theme: default
+    toc: true
+    number-sections: true
+execute: 
+  eval: true
+  echo: true
+  warning: false
+  freeze: true
+editor: visual
+---
+
+## Getting Started
+
+Code chunk below perform the following tasks:
+
+-   loading **knitr**, **DT**, and **tidyverse** family of r packages onto R environment by using `p_load()` of **pacman** package.
+-   importing *Exam_data.csv* into R and save it as a tibble data frame by using `read_csv()` of **readr** package.
+
+```{r}
+pacman::p_load(tidyverse, knitr, DT)
+
+exam_data <- read_csv("data/Exam_data.csv")
+```
+
+## Hello Plot
+
+Code chunk below is used to plot a histogram of Maths score by using functions of **ggplot2** package.
+
+::: {style="font-size: 1.20em"}
+```{r}
+ggplot(data = exam_data,
+        aes(x = MATHS)) +
+  geom_histogram(bins = 10,
+                 boundary = 100,
+                 color = "black",
+                 fill = "pink") +
+  ggtitle("Distribution of Maths Scores")
+```
+:::
+
+### Dual columns slide
+
+In this sub-sections, `columns` function of Quarto is used to split the display area into two equal parts.
+
+:::::: columns
+:::: {.column width="50%"}
+The code chunk.
+
+::: {style="font-size: 1.00em"}
+```{r}
+#| eval: false
+ggplot(data = exam_data,
+        aes(x = MATHS)) +
+  geom_histogram(bins = 10,
+                 boundary = 100,
+                 color = "black",
+                 fill = "light blue") +
+  ggtitle("Distribution of Maths Scores")
+```
+:::
+::::
+
+::: {.column width="50%"}
+The plot
+
+```{r}
+#| echo: false
+#| fig-height: 6
+ggplot(data = exam_data,
+        aes(x = MATHS)) +
+  geom_histogram(bins = 10,
+                 boundary = 100,
+                 color = "black",
+                 fill = "light blue") +
+  ggtitle("Distribution of Maths Scores")
+```
+:::
+::::::
+
+### Working with tableset panel
+
+In this sub-section, `panel-tabset` function of Quarto is used to create two tabset panels. One for displaying the code chunk used to plot the histogram and the other one, for displaying the histogram.
+
+:::: panel-tabset
+## The code chunk
+
+::: {style="font-size: 1.35em"}
+```{r}
+#| eval: false
+#| code-line-numbers: "7"
+ggplot(data = exam_data,
+        aes(x = MATHS)) +
+  geom_histogram(bins = 10,
+                 boundary = 100,
+                 color = "black",
+                 fill = "light blue") +
+  ggtitle("Distribution of Maths Scores")
+```
+:::
+
+## The plot
+
+```{r}
+#| echo: false
+#| fig-height: 6
+ggplot(data = exam_data,
+        aes(x = MATHS)) +
+  geom_histogram(bins = 10,
+                 boundary = 100,
+                 color = "black",
+                 fill = "light blue") +
+  ggtitle("Distribution of Maths Scores")
+```
+::::
+
+## Adding Table
+
+### Static html table
+
+This slide shows an example of displaying a professional looking table on Quarto using `kable()` of **knitr** package.
+
+```{r}
+#| echo: false
+head(exam_data) %>%
+  knitr::kable(format = "html")
+```
+
+### Interactive table
+
+This slide shows an example of displaying a professional looking table on Quarto using `datatable()` of **DT** package.
+
+```{r}
+#| echo: false
+datatable(data = exam_data, 
+  options = list(
+    scrollY = "400px",
+    scrollX = TRUE,
+    scrollCollapse = TRUE,
+    paging = FALSE),
+    width = "100%")
+```

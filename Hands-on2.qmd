@@ -1,0 +1,184 @@
+---
+title: "R Series Episode 2: <br/>"
+subtitle: "Creating Awsome Web Slides in Quarto with revealjs"
+author: "Dr. Kam Tin Seong"
+institute: "School of Computing and Information Systems, SMU"
+date: "`r Sys.Date()`"
+format: 
+  revealjs:
+    theme: sky
+    width: 1600
+    height: 900
+    incremental: false
+execute: 
+  eval: true
+  echo: true
+  warning: false
+editor: visual
+---
+
+## Why you are here?
+
+::: incremental
+Because you are:
+
+-   tired of creating PowerPoint slides.
+-   interested to create awesome web slides using R.
+:::
+
+## Getting Started
+
+Code chunk below perform the following tasks:
+
+-   loading **knitr**, **DT**, and **tidyverse** family of r packages onto R environment by using `p_load()` of **pacman** package.
+-   importing *Exam_data.csv* into R and save it as a tibble data frame by using `read_csv()` of **readr** package.
+
+```{r}
+pacman::p_load(tidyverse, knitr, DT)
+
+exam_data <- read_csv("data/Exam_data.csv")
+```
+
+## Hello Plot
+
+The histogram reveals the distribution of Maths scores.
+
+```{r}
+#| echo: false
+#| fig-width: 8
+ggplot(data = exam_data,
+        aes(x = MATHS)) +
+  geom_histogram(bins = 10,
+                 boundary = 100,
+                 color = "black",
+                 fill = "light blue") +
+  ggtitle("Distribution of Maths Scores")
+```
+
+::: callout-tip
+Refer to the quarto file for the code chunk used.
+:::
+
+------------------------------------------------------------------------
+
+### Dual columns slide
+
+This slide uses `columns` function of Quarto to create a split the display area into two equal parts.
+
+::: callout-tip
+Refer to the quarto file for the code chunk used.
+:::
+
+:::::: columns
+:::: {.column width="50%"}
+The code chunk.
+
+::: {style="font-size: 1.20em"}
+```{r}
+#| eval: false
+ggplot(data = exam_data,
+        aes(x = MATHS)) +
+  geom_histogram(bins = 10,
+                 boundary = 100,
+                 color = "black",
+                 fill = "light blue") +
+  ggtitle("Distribution of Maths Scores")
+```
+:::
+::::
+
+::: {.column width="50%"}
+The plot
+
+```{r}
+#| echo: false
+#| fig-height: 6
+ggplot(data = exam_data,
+        aes(x = MATHS)) +
+  geom_histogram(bins = 10,
+                 boundary = 100,
+                 color = "black",
+                 fill = "light blue") +
+  ggtitle("Distribution of Maths Scores")
+```
+:::
+::::::
+
+------------------------------------------------------------------------
+
+### Working with Tabsets
+
+This slide uses `panel-tabset` function of Quarto to create two tabset panels. One for displaying the code chunk used to plot the histogram and the other one, for displaying the histogram.
+
+:::: panel-tabset
+## The code chunk
+
+::: {style="font-size: 1.35em"}
+```{r}
+#| eval: false
+#| code-line-numbers: "7"
+ggplot(data = exam_data,
+        aes(x = MATHS)) +
+  geom_histogram(bins = 10,
+                 boundary = 100,
+                 color = "black",
+                 fill = "light blue") +
+  ggtitle("Distribution of Maths Scores")
+```
+:::
+
+## The plot
+
+```{r}
+#| echo: false
+#| fig-height: 6
+ggplot(data = exam_data,
+        aes(x = MATHS)) +
+  geom_histogram(bins = 10,
+                 boundary = 100,
+                 color = "black",
+                 fill = "light blue") +
+  ggtitle("Distribution of Maths Scores")
+```
+::::
+
+::: callout-tip
+Refer to the quarto file for the code chunk used.
+:::
+
+## Adding Table
+
+### Static html table
+
+This slide shows an example of displaying a professional looking table on Quarto using `kable()` of **knitr** package.
+
+```{r}
+#| echo: false
+head(exam_data) %>%
+  knitr::kable(format = "html")
+```
+
+::: callout-tip
+Refer to the quarto file for the code chunk used.
+:::
+
+------------------------------------------------------------------------
+
+### Interactive table
+
+This slide shows an example of displaying a professional looking table on Quarto using `datatable()` of **DT** package.
+
+```{r}
+#| echo: false
+datatable(data = exam_data, 
+  options = list(
+    scrollY = "400px",
+    scrollX = TRUE,
+    scrollCollapse = TRUE,
+    paging = FALSE),
+    width = "100%")
+```
+
+::: callout-tip
+Refer to the quarto file for the code chunk used.
+:::

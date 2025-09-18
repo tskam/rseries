@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "rseries",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "Hands-on1.html",
+    "href": "Hands-on1.html",
+    "title": "My First Date with Quarto",
+    "section": "",
+    "text": "Code chunk below perform the following tasks:\n\nloading knitr, DT, and tidyverse family of r packages onto R environment by using p_load() of pacman package.\nimporting Exam_data.csv into R and save it as a tibble data frame by using read_csv() of readr package.\n\n\npacman::p_load(tidyverse, knitr, DT)\n\nexam_data &lt;- read_csv(\"data/Exam_data.csv\")"
+  },
+  {
+    "objectID": "Hands-on1.html#getting-started",
+    "href": "Hands-on1.html#getting-started",
+    "title": "My First Date with Quarto",
+    "section": "",
+    "text": "Code chunk below perform the following tasks:\n\nloading knitr, DT, and tidyverse family of r packages onto R environment by using p_load() of pacman package.\nimporting Exam_data.csv into R and save it as a tibble data frame by using read_csv() of readr package.\n\n\npacman::p_load(tidyverse, knitr, DT)\n\nexam_data &lt;- read_csv(\"data/Exam_data.csv\")"
+  },
+  {
+    "objectID": "Hands-on1.html#hello-plot",
+    "href": "Hands-on1.html#hello-plot",
+    "title": "My First Date with Quarto",
+    "section": "2 Hello Plot",
+    "text": "2 Hello Plot\nCode chunk below is used to plot a histogram of Maths score by using functions of ggplot2 package.\n\n\nggplot(data = exam_data,\n        aes(x = MATHS)) +\n  geom_histogram(bins = 10,\n                 boundary = 100,\n                 color = \"black\",\n                 fill = \"pink\") +\n  ggtitle(\"Distribution of Maths Scores\")\n\n\n\n\n\n\n\n\n\n\n2.1 Dual columns slide\nIn this sub-sections, columns function of Quarto is used to split the display area into two equal parts.\n\n\nThe code chunk.\n\n\nggplot(data = exam_data,\n        aes(x = MATHS)) +\n  geom_histogram(bins = 10,\n                 boundary = 100,\n                 color = \"black\",\n                 fill = \"light blue\") +\n  ggtitle(\"Distribution of Maths Scores\")\n\n\n\nThe plot\n\n\n\n\n\n\n\n\n\n\n\n\n\n2.2 Working with tableset panel\nIn this sub-section, panel-tabset function of Quarto is used to create two tabset panels. One for displaying the code chunk used to plot the histogram and the other one, for displaying the histogram.\n\nThe code chunkThe plot\n\n\n\n\nggplot(data = exam_data,\n        aes(x = MATHS)) +\n  geom_histogram(bins = 10,\n                 boundary = 100,\n                 color = \"black\",\n                 fill = \"light blue\") +\n  ggtitle(\"Distribution of Maths Scores\")"
+  },
+  {
+    "objectID": "Hands-on1.html#adding-table",
+    "href": "Hands-on1.html#adding-table",
+    "title": "My First Date with Quarto",
+    "section": "3 Adding Table",
+    "text": "3 Adding Table\n\n3.1 Static html table\nThis slide shows an example of displaying a professional looking table on Quarto using kable() of knitr package.\n\n\n\n\n\nID\nCLASS\nGENDER\nRACE\nENGLISH\nMATHS\nSCIENCE\n\n\n\n\nStudent321\n3I\nMale\nMalay\n21\n9\n15\n\n\nStudent305\n3I\nFemale\nMalay\n24\n22\n16\n\n\nStudent289\n3H\nMale\nChinese\n26\n16\n16\n\n\nStudent227\n3F\nMale\nChinese\n27\n77\n31\n\n\nStudent318\n3I\nMale\nMalay\n27\n11\n25\n\n\nStudent306\n3I\nFemale\nMalay\n31\n16\n16\n\n\n\n\n\n\n\n3.2 Interactive table\nThis slide shows an example of displaying a professional looking table on Quarto using datatable() of DT package."
+  },
+  {
+    "objectID": "Hands-on2.html",
+    "href": "Hands-on2.html",
+    "title": "R Series Episode 2: ",
+    "section": "",
+    "text": "Because you are:\n\ntired of creating PowerPoint slides.\ninterested to create awesome web slides using R."
+  },
+  {
+    "objectID": "Hands-on2.html#why-you-are-here",
+    "href": "Hands-on2.html#why-you-are-here",
+    "title": "R Series Episode 2: ",
+    "section": "Why you are here?",
+    "text": "Why you are here?\nBecause you are:\n\ntired of creating PowerPoint slides.\ninterested to create awesome web slides using R."
+  },
+  {
+    "objectID": "Hands-on2.html#getting-started",
+    "href": "Hands-on2.html#getting-started",
+    "title": "R Series Episode 2: ",
+    "section": "Getting Started",
+    "text": "Getting Started\nCode chunk below perform the following tasks:\n\nloading knitr, DT, and tidyverse family of r packages onto R environment by using p_load() of pacman package.\nimporting Exam_data.csv into R and save it as a tibble data frame by using read_csv() of readr package.\n\n\npacman::p_load(tidyverse, knitr, DT)\n\nexam_data &lt;- read_csv(\"data/Exam_data.csv\")"
+  },
+  {
+    "objectID": "Hands-on2.html#hello-plot",
+    "href": "Hands-on2.html#hello-plot",
+    "title": "R Series Episode 2: ",
+    "section": "Hello Plot",
+    "text": "Hello Plot\nThe histogram reveals the distribution of Maths scores.\n\n\n\n\n\n\n\nTip\n\n\nRefer to the quarto file for the code chunk used."
+  },
+  {
+    "objectID": "Hands-on2.html#adding-table",
+    "href": "Hands-on2.html#adding-table",
+    "title": "R Series Episode 2: ",
+    "section": "Adding Table",
+    "text": "Adding Table\nStatic html table\nThis slide shows an example of displaying a professional looking table on Quarto using kable() of knitr package.\n\n\n\n\n\nID\nCLASS\nGENDER\nRACE\nENGLISH\nMATHS\nSCIENCE\n\n\n\n\nStudent321\n3I\nMale\nMalay\n21\n9\n15\n\n\nStudent305\n3I\nFemale\nMalay\n24\n22\n16\n\n\nStudent289\n3H\nMale\nChinese\n26\n16\n16\n\n\nStudent227\n3F\nMale\nChinese\n27\n77\n31\n\n\nStudent318\n3I\nMale\nMalay\n27\n11\n25\n\n\nStudent306\n3I\nFemale\nMalay\n31\n16\n16\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\nRefer to the quarto file for the code chunk used."
+  }
+]

@@ -1,0 +1,32 @@
+project:
+  type: website
+
+website:
+  title: "R Workshop"
+  navbar:
+    left: 
+      - text: "R Series"
+        menu: 
+        - text: "Episode 1"
+          href: Hands-on1.html
+        - text: "Episode 2"
+          href: Hands-on2.html
+      - text: "Now You See It"
+        href: xxx.html
+      - text: "Intro to QGIS"
+        href: xx1.html
+    right:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+
+editor: visual
+
