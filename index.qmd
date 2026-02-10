@@ -4,4 +4,4 @@ title: "rseries"
 
 Welcome to RSeries website.
 
-![](tskam.jpg)
+![](tskam.jpg){width="291"}

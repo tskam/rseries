@@ -75,5 +75,96 @@
     "title": "R Series Episode 2: ",
     "section": "Adding Table",
     "text": "Adding Table\nStatic html table\nThis slide shows an example of displaying a professional looking table on Quarto using kable() of knitr package.\n\n\n\n\n\nID\nCLASS\nGENDER\nRACE\nENGLISH\nMATHS\nSCIENCE\n\n\n\n\nStudent321\n3I\nMale\nMalay\n21\n9\n15\n\n\nStudent305\n3I\nFemale\nMalay\n24\n22\n16\n\n\nStudent289\n3H\nMale\nChinese\n26\n16\n16\n\n\nStudent227\n3F\nMale\nChinese\n27\n77\n31\n\n\nStudent318\n3I\nMale\nMalay\n27\n11\n25\n\n\nStudent306\n3I\nFemale\nMalay\n31\n16\n16\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\nRefer to the quarto file for the code chunk used."
+  },
+  {
+    "objectID": "R_series_Episode01-Intro_to_Quarto.html",
+    "href": "R_series_Episode01-Intro_to_Quarto.html",
+    "title": "R Series Episode 1: Making Your Research Reproducible with Quarto in RStudio",
+    "section": "",
+    "text": "What is Reproducible Research\nA brief introduction to R and RStudio\nIntroduction to Quarto"
+  },
+  {
+    "objectID": "R_series_Episode01-Intro_to_Quarto.html#things-i-am-going-to-share",
+    "href": "R_series_Episode01-Intro_to_Quarto.html#things-i-am-going-to-share",
+    "title": "R Series Episode 1: Making Your Research Reproducible with Quarto in RStudio",
+    "section": "Things I am going to share",
+    "text": "Things I am going to share\n\nWhat is Reproducible Research\nA brief introduction to R and RStudio\nIntroduction to Quarto"
+  },
+  {
+    "objectID": "R_series_Episode01-Intro_to_Quarto.html#what-is-reproducible-research",
+    "href": "R_series_Episode01-Intro_to_Quarto.html#what-is-reproducible-research",
+    "title": "R Series Episode 1: Making Your Research Reproducible with Quarto in RStudio",
+    "section": "What is Reproducible Research?",
+    "text": "What is Reproducible Research?\n\n\n\nResearch is considered to be reproducible when the exact results can be reproduced if given access to the original data, software, or code.\nReproducible research is sometimes known as reproducibility, reproducible statistical analysis, reproducible data analysis, reproducible reporting, and literate programming.\n\n\n\nSource: https://www.displayr.com/what-is-reproducible-research/"
+  },
+  {
+    "objectID": "R_series_Episode01-Intro_to_Quarto.html#why-research-need-to-be-reproducible",
+    "href": "R_series_Episode01-Intro_to_Quarto.html#why-research-need-to-be-reproducible",
+    "title": "R Series Episode 1: Making Your Research Reproducible with Quarto in RStudio",
+    "section": "Why Research need to be Reproducible?",
+    "text": "Why Research need to be Reproducible?\n\n\n\nAccording to a Nature, more than 70% of researchers have tried and failed to reproduce another scientist’s experiments, and more than half have failed to reproduce their own experiments."
+  },
+  {
+    "objectID": "R_series_Episode01-Intro_to_Quarto.html#r-a-very-brief-introduction",
+    "href": "R_series_Episode01-Intro_to_Quarto.html#r-a-very-brief-introduction",
+    "title": "R Series Episode 1: Making Your Research Reproducible with Quarto in RStudio",
+    "section": "R: A very brief introduction",
+    "text": "R: A very brief introduction\n\nR is a powerful language and environment for statistical computing and graphics. It is a re-implementation of the S language, which was developed in the 1980’s.\nR is a high level language. The core language has some superficial similarities to C, but many things are handled automatically in R that are not in C.\nIt is a free and open source software (FOSS) under the terms of the Free Software Foundation’s GNU General Public License in source code form.\nIt compiles and runs on a wide variety of UNIX platforms and similar systems (including FreeBSD and Linux), Windows and MacOS.\nIt is available from The Comprehensive R Archive Network"
+  },
+  {
+    "objectID": "R_series_Episode01-Intro_to_Quarto.html#introducing-r-studio",
+    "href": "R_series_Episode01-Intro_to_Quarto.html#introducing-r-studio",
+    "title": "R Series Episode 1: Making Your Research Reproducible with Quarto in RStudio",
+    "section": "Introducing R Studio",
+    "text": "Introducing R Studio\n\nA free and open-source integrated development environment (IDE) for R."
+  },
+  {
+    "objectID": "R_series_Episode01-Intro_to_Quarto.html#introducing-quarto",
+    "href": "R_series_Episode01-Intro_to_Quarto.html#introducing-quarto",
+    "title": "R Series Episode 1: Making Your Research Reproducible with Quarto in RStudio",
+    "section": "Introducing Quarto",
+    "text": "Introducing Quarto\n\nQuarto is an open-source scientific and technical publishing system designed and developed by posit formally known as RStudio."
+  },
+  {
+    "objectID": "R_series_Episode01-Intro_to_Quarto.html#introducing-quarto-1",
+    "href": "R_series_Episode01-Intro_to_Quarto.html#introducing-quarto-1",
+    "title": "R Series Episode 1: Making Your Research Reproducible with Quarto in RStudio",
+    "section": "Introducing Quarto",
+    "text": "Introducing Quarto\n\nQuarto documents are authored using markdown, an easy to write plain text format.\nQuarto documents are generated using Pandoc, a universal document converter."
+  },
+  {
+    "objectID": "R_series_Episode01-Intro_to_Quarto.html#introducing-quarto-2",
+    "href": "R_series_Episode01-Intro_to_Quarto.html#introducing-quarto-2",
+    "title": "R Series Episode 1: Making Your Research Reproducible with Quarto in RStudio",
+    "section": "Introducing Quarto",
+    "text": "Introducing Quarto\n\nA method of literate programming that embed code and output from Python, R, and JavaScript via integration with Jupyter, Julia, and Observable."
+  },
+  {
+    "objectID": "R_series_Episode01-Intro_to_Quarto.html#introducing-quarto-3",
+    "href": "R_series_Episode01-Intro_to_Quarto.html#introducing-quarto-3",
+    "title": "R Series Episode 1: Making Your Research Reproducible with Quarto in RStudio",
+    "section": "Introducing Quarto",
+    "text": "Introducing Quarto\n\nA variety of extensions to Pandoc markdown useful for technical writing including cross-references, sub-figures, layout panels, hoverable citations and footnotes, callouts, and more.\nA project system for rendering groups of documents at once, sharing options across documents, and producing aggregate output like websites and books.\nAuthoring using a wide variety of editors and notebooks including JupyterLab, RStudio, and VS Code.\nA visual markdown editor that provides a productive writing interface for composing long-form documents.\n\nLearn more about Quarto at https://quarto.org."
+  },
+  {
+    "objectID": "R_series_Episode01-Intro_to_Quarto.html#downloading-and-installing-quarto",
+    "href": "R_series_Episode01-Intro_to_Quarto.html#downloading-and-installing-quarto",
+    "title": "R Series Episode 1: Making Your Research Reproducible with Quarto in RStudio",
+    "section": "Downloading and Installing Quarto",
+    "text": "Downloading and Installing Quarto\n\nVisit this site and download the Quarto of your choice."
+  },
+  {
+    "objectID": "R_series_Episode01-Intro_to_Quarto.html#its-time-to-get-your-hands-dirty",
+    "href": "R_series_Episode01-Intro_to_Quarto.html#its-time-to-get-your-hands-dirty",
+    "title": "R Series Episode 1: Making Your Research Reproducible with Quarto in RStudio",
+    "section": "It’s Time to Get Your Hands Dirty!",
+    "text": "It’s Time to Get Your Hands Dirty!"
+  },
+  {
+    "objectID": "R_series_Episode01-Intro_to_Quarto.html#to-learn-more",
+    "href": "R_series_Episode01-Intro_to_Quarto.html#to-learn-more",
+    "title": "R Series Episode 1: Making Your Research Reproducible with Quarto in RStudio",
+    "section": "To Learn more",
+    "text": "To Learn more\n28 Quarto of R for Data Science (2e)\nQuarto Guide\nQuarto examples gallery\nFigures\nTables\nDiagrams\nCallout Blocks\nArticle Layout\nMarkdown Basics\nRStudio IDE\nGet started with Quarto by Mine Çetinkaya-Rundel\nQuarto for Academics by Mine Çetinkaya-Rundel"
   }
 ]

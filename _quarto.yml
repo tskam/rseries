@@ -8,7 +8,7 @@ website:
       - text: "R Series"
         menu: 
         - text: "Episode 1"
-          href: Hands-on1.html
+          href: R_series_Episode01-Intro_to_Quarto.html
         - text: "Episode 2"
           href: Hands-on2.html
       - text: "Now You See It"
