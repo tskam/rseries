@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "rseries",
+    "title": "Library Workshop",
     "section": "",
     "text": "Welcome to RSeries website."
   },
@@ -166,5 +166,82 @@
     "title": "R Series Episode 1: Making Your Research Reproducible with Quarto in RStudio",
     "section": "To Learn more",
     "text": "To Learn more\n28 Quarto of R for Data Science (2e)\nQuarto Guide\nQuarto examples gallery\nFigures\nTables\nDiagrams\nCallout Blocks\nArticle Layout\nMarkdown Basics\nRStudio IDE\nGet started with Quarto by Mine Çetinkaya-Rundel\nQuarto for Academics by Mine Çetinkaya-Rundel"
+  },
+  {
+    "objectID": "R_series_Episode02-Creating_Awesome_Web_Slides_in_Quarto.html#why-you-are-here",
+    "href": "R_series_Episode02-Creating_Awesome_Web_Slides_in_Quarto.html#why-you-are-here",
+    "title": "R Series Episode 2: Creating Awesome Web Slides in Quarto with Revealjs",
+    "section": "Why you are here?",
+    "text": "Why you are here?\nBecause you are:\n\ntired of creating PowerPoint slides\ninterested to create awesome web slides using R."
+  },
+  {
+    "objectID": "R_series_Episode02-Creating_Awesome_Web_Slides_in_Quarto.html#what-you-may-not-know",
+    "href": "R_series_Episode02-Creating_Awesome_Web_Slides_in_Quarto.html#what-you-may-not-know",
+    "title": "R Series Episode 2: Creating Awesome Web Slides in Quarto with Revealjs",
+    "section": "What you may not know?",
+    "text": "What you may not know?\nhtml5\n\nJavaScript\n\nCSS (Cascading Style Sheets)"
+  },
+  {
+    "objectID": "R_series_Episode02-Creating_Awesome_Web_Slides_in_Quarto.html#quarto-presentation-slide",
+    "href": "R_series_Episode02-Creating_Awesome_Web_Slides_in_Quarto.html#quarto-presentation-slide",
+    "title": "R Series Episode 2: Creating Awesome Web Slides in Quarto with Revealjs",
+    "section": "Quarto Presentation Slide",
+    "text": "Quarto Presentation Slide\nDo you know that Quarto presentation slides are web-enabled?"
+  },
+  {
+    "objectID": "R_series_Episode02-Creating_Awesome_Web_Slides_in_Quarto.html#introducing-revealjs",
+    "href": "R_series_Episode02-Creating_Awesome_Web_Slides_in_Quarto.html#introducing-revealjs",
+    "title": "R Series Episode 2: Creating Awesome Web Slides in Quarto with Revealjs",
+    "section": "Introducing revealjs",
+    "text": "Introducing revealjs"
+  },
+  {
+    "objectID": "R_series_Episode02-Creating_Awesome_Web_Slides_in_Quarto.html#hello-plot",
+    "href": "R_series_Episode02-Creating_Awesome_Web_Slides_in_Quarto.html#hello-plot",
+    "title": "R Series Episode 2: Creating Awesome Web Slides in Quarto with Revealjs",
+    "section": "Hello plot",
+    "text": "Hello plot\n\npacman::p_load(tidyverse, knitr, DT) \n\nexam_data &lt;- read_csv(\"data/Exam_data.csv\")\n\nggplot(data=exam_data, aes(x = MATHS)) +\n  geom_histogram(bins=10, \n                 boundary = 100,\n                 color=\"black\", \n                 fill=\"light blue\") +\n  ggtitle(\"Distribution of Maths scores\")"
+  },
+  {
+    "objectID": "R_series_Episode02-Creating_Awesome_Web_Slides_in_Quarto.html#the-code-chunk-is-way-too-small.-increase-the-font-size-please",
+    "href": "R_series_Episode02-Creating_Awesome_Web_Slides_in_Quarto.html#the-code-chunk-is-way-too-small.-increase-the-font-size-please",
+    "title": "R Series Episode 2: Creating Awesome Web Slides in Quarto with Revealjs",
+    "section": "The code chunk is way too small. Increase the font size please!",
+    "text": "The code chunk is way too small. Increase the font size please!"
+  },
+  {
+    "objectID": "R_series_Episode02-Creating_Awesome_Web_Slides_in_Quarto.html#dividing-the-page",
+    "href": "R_series_Episode02-Creating_Awesome_Web_Slides_in_Quarto.html#dividing-the-page",
+    "title": "R Series Episode 2: Creating Awesome Web Slides in Quarto with Revealjs",
+    "section": "Dividing the page",
+    "text": "Dividing the page"
+  },
+  {
+    "objectID": "R_series_Episode02-Creating_Awesome_Web_Slides_in_Quarto.html#working-with-tabsets",
+    "href": "R_series_Episode02-Creating_Awesome_Web_Slides_in_Quarto.html#working-with-tabsets",
+    "title": "R Series Episode 2: Creating Awesome Web Slides in Quarto with Revealjs",
+    "section": "Working with Tabsets",
+    "text": "Working with Tabsets\n\nThe code chunkThe plot\n\n\n\n\npacman::p_load(tidyverse) \n\nexam_data &lt;- read_csv(\"data/Exam_data.csv\")\n\nggplot(data=exam_data, aes(x = MATHS)) +\n  geom_histogram(bins=10, \n                 boundary = 100,\n                 color=\"black\", \n                 fill=\"light blue\") +\n  ggtitle(\"Distribution of Maths scores\")"
+  },
+  {
+    "objectID": "R_series_Episode02-Creating_Awesome_Web_Slides_in_Quarto.html#adding-table",
+    "href": "R_series_Episode02-Creating_Awesome_Web_Slides_in_Quarto.html#adding-table",
+    "title": "R Series Episode 2: Creating Awesome Web Slides in Quarto with Revealjs",
+    "section": "Adding Table",
+    "text": "Adding Table\nStatic html table\n\n\nhead(exam_data) %&gt;% \n  knitr::kable(format = \"html\")\n\n\n\n\n\n\n\n\nID\nCLASS\nGENDER\nRACE\nENGLISH\nMATHS\nSCIENCE\n\n\n\n\nStudent321\n3I\nMale\nMalay\n21\n9\n15\n\n\nStudent305\n3I\nFemale\nMalay\n24\n22\n16\n\n\nStudent289\n3H\nMale\nChinese\n26\n16\n16\n\n\nStudent227\n3F\nMale\nChinese\n27\n77\n31\n\n\nStudent318\n3I\nMale\nMalay\n27\n11\n25\n\n\nStudent306\n3I\nFemale\nMalay\n31\n16\n16"
+  },
+  {
+    "objectID": "R_series_Episode02-Creating_Awesome_Web_Slides_in_Quarto.html#themes",
+    "href": "R_series_Episode02-Creating_Awesome_Web_Slides_in_Quarto.html#themes",
+    "title": "R Series Episode 2: Creating Awesome Web Slides in Quarto with Revealjs",
+    "section": "Themes",
+    "text": "Themes\n\n\nThere are 11 built-in themes provided for Reveal presentations. They are:\n\nbeige\nblood\ndark\ndefault\n\n\n\nleague\nmoon\nnight\nserif\nsimple\nsky\nsolarized\n\nYou can also create your own themes."
+  },
+  {
+    "objectID": "R_series_Episode02-Creating_Awesome_Web_Slides_in_Quarto.html#references",
+    "href": "R_series_Episode02-Creating_Awesome_Web_Slides_in_Quarto.html#references",
+    "title": "R Series Episode 2: Creating Awesome Web Slides in Quarto with Revealjs",
+    "section": "References",
+    "text": "References\n\nQuarto Presentation\n\nrealjs"
   }
 ]

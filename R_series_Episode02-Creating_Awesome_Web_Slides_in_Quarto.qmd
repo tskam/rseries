@@ -1,0 +1,340 @@
+---
+title: "R Series Episode 2: <br/>Creating Awesome Web Slides in Quarto with Revealjs"
+subtitle: ""
+author: "Dr. Kam Tin Seong<br/>Assoc. Professor of Information Systems"
+institute: "School of Computing and Information Systems,<br/>Singapore Management University"
+date: "`r Sys.Date()`"
+format: 
+  revealjs:
+    width: 1600
+    height: 900
+    incremental: false
+    format:
+      show-notes: separate-page
+      slide-number: true
+execute: 
+  echo: true
+  eval: true
+  warning: false
+date-format: "DD MMM YYYY"
+editor: visual
+---
+
+## Why you are here?
+
+Because you are:
+
+-   tired of creating PowerPoint slides
+
+-   interested to create awesome web slides using R.
+
+## What you may not know?
+
+### html5
+
+![](img02/image3.jpg){width="200"}
+
+### JavaScript
+
+![](img02/image4.jpg){width="150"}
+
+### CSS (Cascading Style Sheets)
+
+![](img02/image5.jpg){width="100"}
+
+## Quarto Presentation Slide
+
+Do you know that Quarto presentation slides are web-enabled?
+
+![](img02/image1.jpg)
+
+------------------------------------------------------------------------
+
+### Quarto Presentation Slide
+
+But Slidy presentation slides can be rather boring
+
+![](img02/image2.jpg)
+
+## Introducing [revealjs]()
+
+![](img02/image6.jpg)
+
+------------------------------------------------------------------------
+
+### Let's get started
+
+-   Launch RStudio.
+-   Select File -\> New File -\> Quarto Presentation
+
+![](img02/image7.jpg)
+
+------------------------------------------------------------------------
+
+### Creating a Revel JS presentation
+
+![](img02/image8.jpg){width="672"}
+
+-   Click on **Create** button.
+
+------------------------------------------------------------------------
+
+### Editing the YAML
+
+![](img02/image9.jpg){width="454"}
+
+------------------------------------------------------------------------
+
+### Editing the front page
+
+Edit the default to as shown below.
+
+![](img02/image10.jpg)
+
+-   Delete the rest of the default text.
+-   Save the Quarto Presentation file
+-   Knit the newly saved qmd file.
+
+------------------------------------------------------------------------
+
+### Modifying display aspect ratio
+
+-   Edit line 8 and 9
+
+![](img02/image11.jpg){width="500" height="200"}
+
+-   Save the Quarto file and knit the document.
+
+------------------------------------------------------------------------
+
+### Making slides
+
+-   Slide 1 starts where YAML ends
+
+-   3 dashes in a row --- on a line by itself is a new slide.
+
+![](img02/image12.jpg)
+
+------------------------------------------------------------------------
+
+### Incremental reveals
+
+There are two ways to set incremental reveals.
+
+-   global setting editing the yaml.
+
+![](img02/image13a.jpg){width="433"}
+
+-   local setting
+
+![](img02/image13b.jpg){width="672"}
+
+## Hello plot
+
+```{r}
+pacman::p_load(tidyverse, knitr, DT) 
+
+exam_data <- read_csv("data/Exam_data.csv")
+
+ggplot(data=exam_data, aes(x = MATHS)) +
+  geom_histogram(bins=10, 
+                 boundary = 100,
+                 color="black", 
+                 fill="light blue") +
+  ggtitle("Distribution of Maths scores")
+```
+
+## The code chunk is way too small. Increase the font size please!
+
+![](img02/image19.jpg){width="300"}
+
+::: {style="font-size: 1.5em"}
+```{r}
+#| eval: false
+#| echo: false
+pacman::p_load(tidyverse) 
+
+exam_data <- read_csv("data/Exam_data.csv")
+
+ggplot(data=exam_data, aes(x = MATHS)) +
+  geom_histogram(bins=10, 
+                 boundary = 100,
+                 color="black", 
+                 fill="light blue") +
+  ggtitle("Distribution of Maths scores")
+```
+:::
+
+## Dividing the page
+
+:::: columns
+::: {.column width="50%"}
+![](img02/image14.jpg){width="500"}
+:::
+::::
+
+------------------------------------------------------------------------
+
+### Dividing the page
+
+:::::: columns
+:::: {.column width="50%"}
+### I am on the left!
+
+::: {style="font-size: 1.5em"}
+```{r}
+#| eval: false
+pacman::p_load(tidyverse) 
+
+exam_data <- read_csv("data/Exam_data.csv")
+
+ggplot(data=exam_data, aes(x = MATHS)) +
+  geom_histogram(bins=10, 
+                 boundary = 100,
+                 color="black", 
+                 fill="light blue") +
+  ggtitle("Distribution of Maths scores")
+```
+:::
+::::
+
+::: {.column width="50%"}
+### I am on the right!
+
+```{r}
+#| echo: false
+pacman::p_load(tidyverse) 
+
+exam_data <- read_csv("data/Exam_data.csv")
+
+ggplot(data=exam_data, aes(x = MATHS)) +
+  geom_histogram(bins=10, 
+                 boundary = 100,
+                 color="black", 
+                 fill="light blue") +
+  ggtitle("Distribution of Maths scores")
+```
+:::
+::::::
+
+## Working with Tabsets
+
+:::: panel-tabset
+## The code chunk
+
+::: {style="font-size: 1.5em"}
+```{r}
+#| eval: false
+pacman::p_load(tidyverse) 
+
+exam_data <- read_csv("data/Exam_data.csv")
+
+ggplot(data=exam_data, aes(x = MATHS)) +
+  geom_histogram(bins=10, 
+                 boundary = 100,
+                 color="black", 
+                 fill="light blue") +
+  ggtitle("Distribution of Maths scores")
+```
+:::
+
+## The plot
+
+```{r}
+#| echo: false
+pacman::p_load(tidyverse) 
+
+exam_data <- read_csv("data/Exam_data.csv")
+
+ggplot(data=exam_data, aes(x = MATHS)) +
+  geom_histogram(bins=10, 
+                 boundary = 100,
+                 color="black", 
+                 fill="light blue") +
+  ggtitle("Distribution of Maths scores")
+```
+::::
+
+------------------------------------------------------------------------
+
+### This is what you need!
+
+![](img02/image20.jpg){width="273"}
+
+## Adding Table
+
+### Static html table
+
+::: {style="font-size: 1.5em"}
+```{r}
+#| eval: false
+head(exam_data) %>% 
+  knitr::kable(format = "html")
+```
+:::
+
+::: {style="font-size: 0.8em"}
+```{r}
+#| echo: false
+head(exam_data) %>% 
+  knitr::kable(format = "html")
+```
+:::
+
+------------------------------------------------------------------------
+
+### Interactive table
+
+::: {style="font-size: 1.5em"}
+```{r}
+#| eval: false
+datatable(exam_data, 
+          options = list(pageLength = 5, autoWidth = TRUE))
+```
+:::
+
+::: {style="font-size: 0.8em"}
+```{r}
+#| echo: false
+datatable(exam_data, 
+          options = list(pageLength = 5, autoWidth = TRUE))
+```
+:::
+
+## Themes
+
+::::: columns
+::: {.column width="50%"}
+There are 11 built-in themes provided for Reveal presentations. They are:
+
+-   beige
+-   blood
+-   dark
+-   default
+:::
+
+::: {.column width="50%"}
+-   league
+-   moon
+-   night
+-   serif
+-   simple
+-   sky
+-   solarized
+
+You can also create your own themes.
+:::
+:::::
+
+## References
+
+-   [Quarto Presentation](https://quarto.org/docs/presentations/)
+
+    -   [realjs](https://quarto.org/docs/presentations/revealjs/)
+
+```{r}
+#| eval: false
+#| echo: false
+
+renderthis::to_pdf(from = "R_series_Episode02-Creating_Awesome_Web_Slides_in_Quarto.qmd")
+```
