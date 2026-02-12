@@ -11,6 +11,10 @@ website:
           href: R_series_Episode01-Intro_to_Quarto.html
         - text: "Episode 2"
           href: R_series_Episode02-Creating_Awesome_Web_Slides_in_Quarto.html
+        - text: "Episode 3"
+          href: R_series_Episode03-Happy_git_and_github.html
+        - text: "Episode 4"
+          href: R_series_Episode04-Building_Website_and_Blog_with_Quarto.html
       - text: "Now You See It"
         href: xxx.html
       - text: "Intro to QGIS"
