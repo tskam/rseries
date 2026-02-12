@@ -1,0 +1,127 @@
+---
+title: "R Series Episode 4: <br/>Building Website and Blog with Quarto"
+subtitle: ""
+author: "Dr. Kam Tin Seong<br/>Assoc. Professor of Information Systems"
+institute: "School of Computing and Information Systems,<br/>Singapore Management University"
+date: "`r Sys.Date()`"
+format: 
+  revealjs:
+    width: 1600
+    height: 900
+    incremental: false
+    format:
+      show-notes: separate-page
+      slide-number: true
+execute: 
+  echo: true
+  eval: true
+  warning: false
+date-format: "DD MMM YYYY"
+editor: visual
+---
+
+## Content
+
+-   An overview of Quarto Websites and Blogs
+-   Setting up the environment
+    -   Installing git
+    -   Signing-up Github
+    -   Signing-up Netlify
+-   My First Website/Blog
+
+------------------------------------------------------------------------
+
+## Why you are here?
+
+::::: columns
+::: {.column width="50%"}
+In Business: Show me your business card!
+
+![](img04/image1.jpg)
+:::
+
+::: {.column width="50%"}
+In Academic World: Show me your Website/Blog! ![](img04/image2.jpg)
+
+The [link](https://giniceseah.netlify.app/)
+:::
+:::::
+
+## Why you are here?
+
+You want to publish professionally edited web post like below without having to learn web editing.
+
+-   [An example of MITB stundet's Portfolio](https://akalestale.netlify.app/)
+-   [IS415: Geospatial Analytics and Application](https://is415-samanthafoo.netlify.app/): An example of undergraduate coursework webpage.
+-   [Is There a Space in Landslide Susceptibility Modelling: A Case Study of Valtellina Valley, Northern Italy](https://is485-whatcauseslandslides.netlify.app/): An example of undergraduate FYP project webpage.
+-   Course website: [ISSS608 Visual Analytics and Applications](https://isss608-ay2025-26jan.netlify.app/)
+-   Web book: [R for Visual Analytics](https://r4va.netlify.app/) & [R for Geospatial Data Science and Analytics](https://r4gdsa.netlify.app/)
+
+## What is Quarto Website/Blog?
+
+-   Quarto Website/Blog is a web publishing format optimized for scientific and technical communication. Quarto articles include:
+
+-   Reader-friendly typography that adapts well to mobile devices.
+
+-   Features essential to technical writing like LaTeX math, citations, and footnotes.
+
+-   Flexible figure layout options (e.g. displaying figures at a larger width than the article text).
+
+-   Attractively rendered tables with optional support for pagination.
+
+-   Support for a wide variety of diagramming tools for illustrating concepts.
+
+-   The ability to incorporate JavaScript and D3-based interactive visualizations.
+
+-   A variety of ways to publish articles, including support for publishing sets of articles as a [Quarto website](https://smt201-ay2022-23t1.netlify.app/) or as a [Quarto Blog](https://www.apreshill.com/about/).
+
+Reference: [Quarto Websites and Blogs](https://quarto.org/docs/websites/)
+
+## Getting Started
+
+-   Downloading and installing Quarto (if you have yet to do so!)
+    -   Visit this [link](https://quarto.org/docs/get-started/) to download Quarto installer.
+-   Installing git
+    -   Download git at this [link](https://git-scm.com/downloads) and install in your computer.
+-   Register with github
+    -   visit this [link](https://github.com/) and create a github account.
+-   Signing up at Netlify
+    -   visit this [link](https://www.netlify.com/) and signing up with Netlify.
+-   Installing [**usethis**](https://usethis.r-lib.org/) R package with RStudio.
+
+## Let's Get Your Hands Dirty!
+
+![](img04/image4.jpg)
+
+------------------------------------------------------------------------
+
+### Editing the website navigation bar
+
+Let us editing *\_quarto.yml* as shown below.
+
+![](img04/image5.jpg)
+
+------------------------------------------------------------------------
+
+### Editing the About page
+
+Let us edit the *About.qmd* as shown below.
+
+![](img04/image6.jpg)
+
+Notice that Quarto includes 5 built in templates, drawing inspiration from the Postcards R Package. Built in templates include: jolla, trestles, solana, marquee, and broadside.
+
+## References
+
+-   [Quarto for an Academic Website](https://ddimmery.com/posts/quarto-website/)
+
+-   [The ultimate guide to starting a Quarto blog](https://albert-rapp.de/posts/13_quarto_blog_writing_guide/13_quarto_blog_writing_guide.html)
+
+-   Visit [here](https://quarto.org/docs/websites/) to learn more about Quarto Websites and Blogs.
+
+```{r}
+#| eval: false
+#| echo: false
+
+renderthis::to_pdf(from = "R_series_Episode04-Building_Website_and_Blog_with_Quarto.qmd")
+```

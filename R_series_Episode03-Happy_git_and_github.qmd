@@ -1,0 +1,307 @@
+---
+title: "R Series Episode 3: </br> Happy Git and Github with RStudio"
+subtitle: ""
+author: "Dr. Kam Tin Seong<br/>Assoc. Professor of Information Systems"
+institute: "School of Computing and Information Systems,<br/>Singapore Management University"
+date: "`r Sys.Date()`"
+format: 
+  revealjs:
+    width: 1600
+    height: 900
+    incremental: false
+    format:
+      show-notes: separate-page
+      slide-number: true
+execute: 
+  echo: true
+  eval: true
+  warning: false
+date-format: "DD MMM YYYY"
+editor: visual
+---
+
+## Content
+
+-   Introducing Version Control
+
+-   git and github
+
+-   Creating a GitHub account
+
+-   Installing git
+
+-   Connecting git and github with RStudio
+
+-   Getting Started working with git and github
+
+## Why you are here?
+
+![](img03/image06.jpg)
+
+------------------------------------------------------------------------
+
+### Local Version Control Systems
+
+A simple database that kept all the changes to files under revision control.
+
+![](img03/image07.jpg)
+
+------------------------------------------------------------------------
+
+### Centralized Version Control Systems
+
+A single server that contains all the versioned files, and a number of clients that check out files from that central place. For many years, this has been the standard for version control.
+
+![](img03/image08.jpg)
+
+------------------------------------------------------------------------
+
+### Distributed Version Control Systems
+
+In a DVCS (such as Git, Mercurial, Bazaar or Darcs), clients don't just check out the latest snapshot of the files; rather, they fully mirror the repository, including its full history. Thus, if any server dies, and these systems were collaborating via that server, any of the client repositories can be copied back up to the server to restore it. Every clone is really a full backup of all the data.
+
+![](img03/image08.jpg)
+
+## What is Git?
+
+::::: columns
+::: {.column width="50%"}
+-   [Git](https://git-scm.com/) is open source software for [**version control**](https://www.atlassian.com/git/tutorials/what-is-version-control). Using Git, you can do things like see all previous versions of code you've ever created in a project.
+
+![](img03/image01a.jpg)
+:::
+
+::: {.column width="50%"}
+![](img03/image01d.jpg)
+:::
+:::::
+
+## What is Github?
+
+::::: columns
+::: {.column width="50%"}
+-   [GitHub](https://kinsta.com/knowledgebase/what-is-github/) is the most popular service (others include GitLab and BitBucket) for collaborating on code using Git.
+
+![](img03/image01b.jpg)
+:::
+
+::: {.column width="50%"}
+![](img03/image01c.jpg)
+:::
+:::::
+
+------------------------------------------------------------------------
+
+### Creating a GitHub account
+
+::::: columns
+::: {.column width="50%"}
+The easiest way to get started is to create an account on [GitHub.com](https://github.com/) (it's free).
+
+![](img03/image04.jpg)
+:::
+
+::: {.column width="50%"}
+-   Pick a username (e.g., DAwarrior),
+-   Enter your email address, a password and the username,
+-   Complete the remaining questions and
+-   Click on `Create account`.
+
+Once you are in, it will look something like this:
+
+![](img03/image05.jpg)
+:::
+:::::
+
+## Setting up git on your computer
+
+::::::: columns
+:::: {.column width="50%"}
+### For MacOSX and Linux
+
+-   MacOSX and Linux computers all come with git pre-installed, but it is not always directly usable. The best way to test if git is ready to use is at the command line, type the following line of code:
+
+::: {style="font-size: 1.35em"}
+```{r}
+#| eval: false
+git --version
+```
+:::
+
+It should return something like below.
+
+![](img03/image02.jpg)
+
+If you get an error, you will have to install git
+::::
+
+:::: {.column width="50%"}
+### For Windows users
+
+-   Windows users will have to install git software by following the steps given below:
+
+    -   Download Git by using this [link](https://git-scm.com/downloads).
+    -   Installing Git.
+
+::: callout-important
+It is important to provide the installer Administrator right when installing Git.
+:::
+::::
+:::::::
+
+## Setup Git in RStudio
+
+::::: columns
+::: {.column width="50%"}
+This step aims to tell RStudio where to find the Git installation.
+
+-   Open RStudio and go to `Tools` -\> `Global Options…`, click on `Git/SVN`.
+
+Your screen should look similar to the screenshot below.
+
+![](img03/image03.jpg)
+:::
+
+::: {.column width="50%"}
+If there is not setting or the setting is at the wrong path,
+
+-   click on the `Browse` button behind **Git executable**:.
+-   Navigate to the correct folder where Git is installed. In general the path should be *C:/Program Files/Git/bin/git.exe* on 64bit machine on Windows OS.
+-   Click on the `Apply` button to confirm the changes.
+-   Click on `OK` button to close the window.
+-   Restart RStudio.
+:::
+:::::
+
+------------------------------------------------------------------------
+
+### Introduce yourself to Git
+
+:::::: columns
+::: {.column width="50%"}
+In this step, you will configure Git and set your user name and email (the email address you used to register on GitHub). You can directly open the Git prompt from within RStudio.
+
+-   Go to `Tools` -\> `Shell` to open the **Git Shell**.
+-   At the **Shell command window**, type the following commands.
+
+git config --global user.name "your Full Name"
+
+git config --global user.email "your Email"
+:::
+
+:::: {.column width="50%"}
+::: callout-note
+-   User name and email needs to be set only once.
+-   User name must be the one you use for github.
+-   email must be the one you use to register the github account.
+-   Visit this [link](https://happygitwithr.com/hello-git.html) to learn more about `git config`.
+:::
+::::
+::::::
+
+## Survival kit for using git and github in R
+
+::::: columns
+::: {.column width="50%"}
+-   [**usethis**](https://usethis.r-lib.org/index.html) package provides workflows functions for R to work with git and github efficiently.
+-   Refer to this [article](https://usethis.r-lib.org/articles/git-credentials.html) and [reference](https://usethis.r-lib.org/reference/index.html) for more information.
+:::
+
+::: {.column width="50%"}
+![](img03/image10.jpg)
+:::
+:::::
+
+------------------------------------------------------------------------
+
+### Can you hear me?
+
+:::::: columns
+:::: {.column width="50%"}
+Checking by using `git_sitrep()`
+
+Before using git and github in RStudio, it is useful for us the check if github are connected proper with the local computer.
+
+-   At RStudio Console, type the command below and press Enter key.
+
+::: {style="font-size: 1.35em"}
+```{r eval=FALSE}
+usethis::git_sitrep()
+```
+:::
+::::
+
+::: {.column width="50%"}
+If you already have a PAT, your Console window should look similar to the screenshot below.
+
+![](img03/image11.jpg)
+
+Note: The above is an subset of the complete list display on the screen.
+:::
+::::::
+
+------------------------------------------------------------------------
+
+### Get a personal access token (PAT)
+
+::::: columns
+:::: {.column width="50%"}
+If we failed to connect to github, use the steps below to fix the problem.
+
+-   Firstly, we need to get a PAT by typing the command below on **RStudio Console** followed by pressing the `Enter` key.
+
+::: {style="font-size: 1.35em"}
+```{r eval=FALSE}
+usethis::create_github_token()
+```
+:::
+
+Assuming you're signed into GitHub, `create_github_token()` takes you to a pre-filled form to create a new PAT.
+
+-   Scroll all the way down the page and click on **Generate token** button.
+-   Copy the *PAT* to the clipboard (i.e. Ctrl-C).
+::::
+:::::
+
+------------------------------------------------------------------------
+
+### Putting the PAT into the Git credential store
+
+:::::: columns
+:::: {.column width="50%"}
+Before we move on, we assume that you have the PAT available on the clipboard of your computer.
+
+-   At RStudio Console, type the command below.
+
+::: {style="font-size: 1.35em"}
+```{r eval=FALSE}
+gitcreds::gitcreds_set()
+```
+:::
+
+If you don't have a PAT stored already, it will prompt you to enter your PAT.
+
+-   Paste the PAT on it (i.e. Ctrol-V).
+
+If you do already have a stored credential, `gitcreds::gitcreds_set()` reveals this and will even let you inspect it as shown in the screenshot on the right.
+::::
+
+::: {.column width="50%"}
+![](img03/image12.jpg)
+:::
+::::::
+
+## Reference
+
+-   Bryan, J (2018) "Excuse Me, Do You Have a Moment to Talk About Version Control?", *The American Statistician*, Vol 72, No. 1, pp. 20-27. The pre-print version of the paper is available at [PeerJ](https://peerj.com/preprints/3159/).
+
+-   [*18 Git and GitHub*](https://r-pkgs.org/git.html) of [**R packages**](https://r-pkgs.org/index.html) by Hadley Wickham (2nd Edition)
+
+-   [**Happy Git and GitHub for the useR**](https://happygitwithr.com/index.html) by Jennifer Bryan
+
+```{r}
+#| eval: false
+#| echo: false
+
+renderthis::to_pdf(from = "R_series_Episode03-Happy_git_and_github.qmd")
+```

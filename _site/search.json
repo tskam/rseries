@@ -243,5 +243,110 @@
     "title": "R Series Episode 2: Creating Awesome Web Slides in Quarto with Revealjs",
     "section": "References",
     "text": "References\n\nQuarto Presentation\n\nrealjs"
+  },
+  {
+    "objectID": "R_series_Episode03-Happy_git_and_github.html#content",
+    "href": "R_series_Episode03-Happy_git_and_github.html#content",
+    "title": "R Series Episode 3:  Happy Git and Github with RStudio",
+    "section": "Content",
+    "text": "Content\n\nIntroducing Version Control\ngit and github\nCreating a GitHub account\nInstalling git\nConnecting git and github with RStudio\nGetting Started working with git and github"
+  },
+  {
+    "objectID": "R_series_Episode03-Happy_git_and_github.html#why-you-are-here",
+    "href": "R_series_Episode03-Happy_git_and_github.html#why-you-are-here",
+    "title": "R Series Episode 3:  Happy Git and Github with RStudio",
+    "section": "Why you are here?",
+    "text": "Why you are here?"
+  },
+  {
+    "objectID": "R_series_Episode03-Happy_git_and_github.html#what-is-git",
+    "href": "R_series_Episode03-Happy_git_and_github.html#what-is-git",
+    "title": "R Series Episode 3:  Happy Git and Github with RStudio",
+    "section": "What is Git?",
+    "text": "What is Git?\n\n\n\nGit is open source software for version control. Using Git, you can do things like see all previous versions of code you’ve ever created in a project."
+  },
+  {
+    "objectID": "R_series_Episode03-Happy_git_and_github.html#what-is-github",
+    "href": "R_series_Episode03-Happy_git_and_github.html#what-is-github",
+    "title": "R Series Episode 3:  Happy Git and Github with RStudio",
+    "section": "What is Github?",
+    "text": "What is Github?\n\n\n\nGitHub is the most popular service (others include GitLab and BitBucket) for collaborating on code using Git."
+  },
+  {
+    "objectID": "R_series_Episode03-Happy_git_and_github.html#setting-up-git-on-your-computer",
+    "href": "R_series_Episode03-Happy_git_and_github.html#setting-up-git-on-your-computer",
+    "title": "R Series Episode 3:  Happy Git and Github with RStudio",
+    "section": "Setting up git on your computer",
+    "text": "Setting up git on your computer\n\n\nFor MacOSX and Linux\n\nMacOSX and Linux computers all come with git pre-installed, but it is not always directly usable. The best way to test if git is ready to use is at the command line, type the following line of code:\n\n\n\ngit --version\n\n\nIt should return something like below.\n\nIf you get an error, you will have to install git\n\nFor Windows users\n\nWindows users will have to install git software by following the steps given below:\n\nDownload Git by using this link.\nInstalling Git.\n\n\n\n\n\n\n\n\nImportant\n\n\nIt is important to provide the installer Administrator right when installing Git."
+  },
+  {
+    "objectID": "R_series_Episode03-Happy_git_and_github.html#setup-git-in-rstudio",
+    "href": "R_series_Episode03-Happy_git_and_github.html#setup-git-in-rstudio",
+    "title": "R Series Episode 3:  Happy Git and Github with RStudio",
+    "section": "Setup Git in RStudio",
+    "text": "Setup Git in RStudio\n\n\nThis step aims to tell RStudio where to find the Git installation.\n\nOpen RStudio and go to Tools -&gt; Global Options…, click on Git/SVN.\n\nYour screen should look similar to the screenshot below.\n\n\nIf there is not setting or the setting is at the wrong path,\n\nclick on the Browse button behind Git executable:.\nNavigate to the correct folder where Git is installed. In general the path should be C:/Program Files/Git/bin/git.exe on 64bit machine on Windows OS.\nClick on the Apply button to confirm the changes.\nClick on OK button to close the window.\nRestart RStudio."
+  },
+  {
+    "objectID": "R_series_Episode03-Happy_git_and_github.html#survival-kit-for-using-git-and-github-in-r",
+    "href": "R_series_Episode03-Happy_git_and_github.html#survival-kit-for-using-git-and-github-in-r",
+    "title": "R Series Episode 3:  Happy Git and Github with RStudio",
+    "section": "Survival kit for using git and github in R",
+    "text": "Survival kit for using git and github in R\n\n\n\nusethis package provides workflows functions for R to work with git and github efficiently.\nRefer to this article and reference for more information."
+  },
+  {
+    "objectID": "R_series_Episode03-Happy_git_and_github.html#reference",
+    "href": "R_series_Episode03-Happy_git_and_github.html#reference",
+    "title": "R Series Episode 3:  Happy Git and Github with RStudio",
+    "section": "Reference",
+    "text": "Reference\n\nBryan, J (2018) “Excuse Me, Do You Have a Moment to Talk About Version Control?”, The American Statistician, Vol 72, No. 1, pp. 20-27. The pre-print version of the paper is available at PeerJ.\n18 Git and GitHub of R packages by Hadley Wickham (2nd Edition)\nHappy Git and GitHub for the useR by Jennifer Bryan"
+  },
+  {
+    "objectID": "R_series_Episode04-Building_Website_and_Blog_with_Quarto.html#content",
+    "href": "R_series_Episode04-Building_Website_and_Blog_with_Quarto.html#content",
+    "title": "R Series Episode 4: Building Website and Blog with Quarto",
+    "section": "Content",
+    "text": "Content\n\nAn overview of Quarto Websites and Blogs\nSetting up the environment\n\nInstalling git\nSigning-up Github\nSigning-up Netlify\n\nMy First Website/Blog"
+  },
+  {
+    "objectID": "R_series_Episode04-Building_Website_and_Blog_with_Quarto.html#why-you-are-here",
+    "href": "R_series_Episode04-Building_Website_and_Blog_with_Quarto.html#why-you-are-here",
+    "title": "R Series Episode 4: Building Website and Blog with Quarto",
+    "section": "Why you are here?",
+    "text": "Why you are here?\n\n\nIn Business: Show me your business card!\n\n\nIn Academic World: Show me your Website/Blog! \nThe link"
+  },
+  {
+    "objectID": "R_series_Episode04-Building_Website_and_Blog_with_Quarto.html#why-you-are-here-1",
+    "href": "R_series_Episode04-Building_Website_and_Blog_with_Quarto.html#why-you-are-here-1",
+    "title": "R Series Episode 4: Building Website and Blog with Quarto",
+    "section": "Why you are here?",
+    "text": "Why you are here?\nYou want to publish professionally edited web post like below without having to learn web editing.\n\nAn example of MITB stundet’s Portfolio\nIS415: Geospatial Analytics and Application: An example of undergraduate coursework webpage.\nIs There a Space in Landslide Susceptibility Modelling: A Case Study of Valtellina Valley, Northern Italy: An example of undergraduate FYP project webpage.\nCourse website: ISSS608 Visual Analytics and Applications\nWeb book: R for Visual Analytics & R for Geospatial Data Science and Analytics"
+  },
+  {
+    "objectID": "R_series_Episode04-Building_Website_and_Blog_with_Quarto.html#what-is-quarto-websiteblog",
+    "href": "R_series_Episode04-Building_Website_and_Blog_with_Quarto.html#what-is-quarto-websiteblog",
+    "title": "R Series Episode 4: Building Website and Blog with Quarto",
+    "section": "What is Quarto Website/Blog?",
+    "text": "What is Quarto Website/Blog?\n\nQuarto Website/Blog is a web publishing format optimized for scientific and technical communication. Quarto articles include:\nReader-friendly typography that adapts well to mobile devices.\nFeatures essential to technical writing like LaTeX math, citations, and footnotes.\nFlexible figure layout options (e.g. displaying figures at a larger width than the article text).\nAttractively rendered tables with optional support for pagination.\nSupport for a wide variety of diagramming tools for illustrating concepts.\nThe ability to incorporate JavaScript and D3-based interactive visualizations.\nA variety of ways to publish articles, including support for publishing sets of articles as a Quarto website or as a Quarto Blog.\n\nReference: Quarto Websites and Blogs"
+  },
+  {
+    "objectID": "R_series_Episode04-Building_Website_and_Blog_with_Quarto.html#getting-started",
+    "href": "R_series_Episode04-Building_Website_and_Blog_with_Quarto.html#getting-started",
+    "title": "R Series Episode 4: Building Website and Blog with Quarto",
+    "section": "Getting Started",
+    "text": "Getting Started\n\nDownloading and installing Quarto (if you have yet to do so!)\n\nVisit this link to download Quarto installer.\n\nInstalling git\n\nDownload git at this link and install in your computer.\n\nRegister with github\n\nvisit this link and create a github account.\n\nSigning up at Netlify\n\nvisit this link and signing up with Netlify.\n\nInstalling usethis R package with RStudio."
+  },
+  {
+    "objectID": "R_series_Episode04-Building_Website_and_Blog_with_Quarto.html#lets-get-your-hands-dirty",
+    "href": "R_series_Episode04-Building_Website_and_Blog_with_Quarto.html#lets-get-your-hands-dirty",
+    "title": "R Series Episode 4: Building Website and Blog with Quarto",
+    "section": "Let’s Get Your Hands Dirty!",
+    "text": "Let’s Get Your Hands Dirty!"
+  },
+  {
+    "objectID": "R_series_Episode04-Building_Website_and_Blog_with_Quarto.html#references",
+    "href": "R_series_Episode04-Building_Website_and_Blog_with_Quarto.html#references",
+    "title": "R Series Episode 4: Building Website and Blog with Quarto",
+    "section": "References",
+    "text": "References\n\nQuarto for an Academic Website\nThe ultimate guide to starting a Quarto blog\nVisit here to learn more about Quarto Websites and Blogs."
   }
 ]
